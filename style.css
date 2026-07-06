@@ -101,3 +101,45 @@ header h1{
 }
 
 }
+
+.grid-section{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+}
+
+.grid-card{
+    background:white;
+    border:1px solid #e6e6e6;
+    border-left:5px solid steelblue;
+    border-radius:10px;
+    padding:22px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.grid-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+.grid-card h3{
+    color:steelblue;
+    margin-bottom:12px;
+}
+
+.grid-card p{
+    color:#444;
+    line-height:1.7;
+}
+
+.grid-card.large{
+    grid-column:span 2;
+}
+
+.grid-card.tall{
+    grid-row:span 2;
+}
