@@ -113,3 +113,42 @@ tabs.forEach(tab => {
     });
 
 });
+
+
+
+
+function getQuote() {
+
+    const quote = document.getElementById("quote-text");
+    const author = document.getElementById("quote-author");
+
+    quote.textContent = "Loading...";
+    author.textContent = "";
+
+    fetch("https://dummyjson.com/quotes/random")
+
+        .then(response => response.json())
+
+        .then(data => {
+
+            quote.textContent = `"${data.quote}"`;
+            author.textContent = "- " + data.author;
+
+        })
+
+        .catch(error => {
+
+            console.log(error);
+
+            quote.textContent = "Unable to load quote.";
+            author.textContent = "";
+
+        });
+
+}
+
+getQuote();
+
+document
+    .getElementById("new-quote")
+    .addEventListener("click", getQuote);
