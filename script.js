@@ -89,3 +89,27 @@ else{
 
 
 console.log(`Welcome to ${site}, ${name}!`);
+
+
+// tab switcher js
+
+const tabs = document.querySelectorAll(".tab-btn");
+const panels = document.querySelectorAll(".tab-content");
+
+tabs.forEach(tab => {
+
+    tab.addEventListener("click", () => {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+
+        panels.forEach(panel => panel.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+            .getElementById(tab.dataset.tab)
+            .classList.add("active");
+
+    });
+
+});

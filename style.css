@@ -200,3 +200,42 @@ header{
     }
 
 }
+
+.tabs {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 40px 0 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: #dddddd;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+.tab-btn.active {
+    background: #1d4ed8;
+    color: white;
+}
+
+.tab-content {
+    display: none;
+    max-width: 700px;
+    margin: auto;
+    padding: 25px;
+    border-radius: 10px;
+    background: #f8f8f8;
+}
+
+.tab-content.active {
+    display: block;
+}
