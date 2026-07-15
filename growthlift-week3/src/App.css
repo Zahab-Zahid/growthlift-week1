@@ -17,3 +17,23 @@ button {
 button:hover {
   background: #357abd;
 }
+
+.quote-box,
+.skills-list,
+.counter {
+  background: white;
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 650px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.skills-list ul {
+  list-style: square;
+  padding-left: 20px;
+}
+
+.skills-list li {
+  margin: 8px 0;
+}

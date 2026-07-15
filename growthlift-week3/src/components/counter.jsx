@@ -1,29 +1,27 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Counter() {
   const [count, setCount] = useState(0);
 
+  useEffect(() => {
+    document.title = `Count: ${count}`;
+  }, [count]);
+
   return (
-    <div style={{ marginTop: "30px" }}>
+    <div className="counter">
       <h2>Counter</h2>
 
-      <p>Current Count: {count}</p>
+      <p>{count}</p>
 
       <button onClick={() => setCount(count + 1)}>
         +
       </button>
 
-      <button
-        onClick={() => setCount(count - 1)}
-        style={{ marginLeft: "10px" }}
-      >
+      <button onClick={() => setCount(count - 1)}>
         -
       </button>
 
-      <button
-        onClick={() => setCount(0)}
-        style={{ marginLeft: "10px" }}
-      >
+      <button onClick={() => setCount(0)}>
         Reset
       </button>
     </div>
