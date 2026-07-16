@@ -1,46 +1,34 @@
 import "./App.css";
 
 import Header from "./components/Header";
-import Card from "./components/Card";
-import Counter from "./components/Counter";
-import Toggle from "./components/Toggle";
-import QuoteBox from "./components/QuoteBox";
-import SkillsList from "./components/SkillsList";
-import StudentCards from "./components/StudentCards";
+
+import { Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div className="app">
+    <div>
 
       <Header />
 
-      <Card
-        title="React"
-        description="Component based library"
-        color="royalblue"
-      />
+      <Routes>
 
-      <Card
-        title="Vite"
-        description="Fast development server"
-        color="mediumseagreen"
-      />
+        <Route path="/" element={<Home />} />
 
-      <Card
-        title="Tailwind"
-        description="Utility-first CSS"
-        color="tomato"
-      />
+        <Route path="/about" element={<About />} />
 
-      <Counter />
+        <Route path="/projects" element={<Projects />} />
 
-      <Toggle />
+        <Route path="/contact" element={<Contact />} />
 
-      <QuoteBox />
+        <Route path="*" element={<NotFound />} />
 
-      <SkillsList />
-
-      <StudentCards />
+      </Routes>
 
     </div>
   );
