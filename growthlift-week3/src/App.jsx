@@ -1,7 +1,4 @@
-import "./App.css";
-
 import Header from "./components/Header";
-
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
@@ -12,23 +9,27 @@ import NotFound from "./pages/NotFound";
 
 function App() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-900 text-white">
 
       <Header />
 
-      <Routes>
+      <div className="p-8">
 
-        <Route path="/" element={<Home />} />
+        <Routes>
 
-        <Route path="/about" element={<About />} />
+          <Route path="/" element={<Home />} />
 
-        <Route path="/projects" element={<Projects />} />
+          <Route path="/about" element={<About />} />
 
-        <Route path="/contact" element={<Contact />} />
+          <Route path="/projects" element={<Projects />} />
 
-        <Route path="*" element={<NotFound />} />
+          <Route path="/contact" element={<Contact />} />
 
-      </Routes>
+          <Route path="*" element={<NotFound />} />
+
+        </Routes>
+
+      </div>
 
     </div>
   );

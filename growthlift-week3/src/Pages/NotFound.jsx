@@ -1,10 +1,8 @@
 function NotFound() {
   return (
-    <div className="page">
-      <h1>404 - Page Not Found</h1>
-
-      <p>The page you are looking for does not exist.</p>
-    </div>
+    <h1 className="text-4xl text-red-400">
+      404 Page Not Found
+    </h1>
   );
 }
 

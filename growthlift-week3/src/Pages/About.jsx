@@ -1,10 +1,12 @@
 function About() {
   return (
-    <div className="page">
-      <h1>About Me</h1>
+    <div>
+      <h1 className="text-3xl font-bold mb-4">
+        About
+      </h1>
 
       <p>
-        My name is Zahab. I am learning React and modern web development.
+        I am learning React and Tailwind through GrowthLift Internship.
       </p>
     </div>
   );
